@@ -8,7 +8,7 @@ output = "../Output/images/"
 # Load the image into picture matrix#
 picture = cv2.imread(input+"DJI_0237.JPG")
 
-# funktion to show image.
+# function to show image.
 def showimg(imgname, image, x=None,y=None):
     cv2.namedWindow(imgname, cv2.WINDOW_NORMAL)
     if x is not None or y is not None:
@@ -107,3 +107,12 @@ showimg("Backprojected image", pumpkinsimage)
 ret, thresh = cv2.threshold(binaryimg,0,255,cv2.THRESH_BINARY)
 #Do some pumpkin counting
 countPumpkins(thresh)
+thresh = cv2.medianBlur(thresh, 5)
+countPumpkins(thresh)
+
+merged_thresh = cv2.merge((thresh,thresh,thresh))
+print np.shape(picture)
+print np.shape(merged_thresh)
+res = cv2.bitwise_and(picture, merged_thresh)
+stack = np.hstack((picture, res))
+showimg("stack", stack)
