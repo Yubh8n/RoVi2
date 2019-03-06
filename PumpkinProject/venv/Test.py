@@ -4,8 +4,6 @@ import math
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
-
-
 input = "../Input/images/"
 output = "../Output/images/"
 
@@ -72,7 +70,6 @@ def MarkPumpkins(org_img, binaryimg):
 def savePicture(imagename, image):
     cv2.imwrite(output+imagename+'.jpg', image)
 
-
 #Get reference pumpkins
 height= 12
 Pumpkin = picture[2193:2193+height, 2395:2395+height] # Reference image
@@ -97,6 +94,7 @@ mask = cv2.inRange(picture, (30-(15*2),94-(22*2),170-(20*2)),(30+(15*2),94+(22*2
 kernel = np.ones((9,9),np.uint8)
 mask1 = cv2.dilate(mask, kernel, iterations=1)
 #showimg("Finding blobs from RGB space", mask1)
+savePicture("RGB_Threshold", mask1)
 
 #Do a CieLAB color thresholding.
 cieLab_image = cv2.cvtColor(picture, cv2.COLOR_BGR2LAB)
@@ -112,6 +110,7 @@ ret, bp_threshold = cv2.threshold(src=binaryimg,thresh=50,maxval=255,type=cv2.TH
 bp_threshold = cv2.merge((bp_threshold,bp_threshold,bp_threshold))
 res = cv2.bitwise_and(picture, bp_threshold)
 stack = np.vstack((picture, bp_threshold, res))
+savePicture("cieLab_8", stack)
 #Show the CieLAB color thresholding image.
 #showimg("CieLAB thresholding", stack)
 
@@ -119,6 +118,7 @@ stack = np.vstack((picture, bp_threshold, res))
 # use backprojection segmentation to find pumpkins.
 pumpkinsimage = backProj(pumpkins, picture)
 #showimg("Backprojected image", pumpkinsimage)
+savePicture("Backprojected_image", pumpkinsimage)
 
 height, width, channels = pumpkins.shape
 Blue,Green,Red= cv2.split(pumpkins)
@@ -133,7 +133,10 @@ Green_mean = np.mean(Green)
 Blue_mean = np.mean(Blue)
 ax.scatter(Red_mean,Green_mean,Blue_mean, c='g', s=100)
 ax.scatter(Red,Green,Blue, c='r')
-#plt.show()
+ax.set_xlim(0,255)
+ax.set_ylim(0,255)
+ax.set_zlim(0,255)
+plt.show()
 
 bgr = [Blue_mean,Green_mean,Red_mean]
 threshold = 50
