@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c1f1db6-2f31-4b28-8f23-ef076664edfe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Test.py" afterDir="false" />
     </list>
@@ -17,13 +16,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+            <state relative-caret-position="243">
+              <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#330#529#0" />
                 <element signature="e#657#1962#0" />
-                <element signature="e#2069#2443#0" />
                 <element signature="e#2481#2794#0" />
+                <element signature="e#2838#3161#0" />
+                <element signature="e#3065#3101#0" />
               </folding>
             </state>
           </provider>
@@ -121,12 +122,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15360501" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19200628" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30456027" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2068404" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -148,13 +150,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="86" column="56" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
+        <state relative-caret-position="243">
+          <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#330#529#0" />
             <element signature="e#657#1962#0" />
-            <element signature="e#2069#2443#0" />
             <element signature="e#2481#2794#0" />
+            <element signature="e#2838#3161#0" />
+            <element signature="e#3065#3101#0" />
           </folding>
         </state>
       </provider>

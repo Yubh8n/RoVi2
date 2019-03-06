@@ -70,6 +70,25 @@ def MarkPumpkins(org_img, binaryimg):
 def savePicture(imagename, image):
     cv2.imwrite(output+imagename+'.jpg', image)
 
+def RGB_space3D(image):
+    #Show RGB space of the pumpkins array
+    Blue, Green, Red= cv2.split(image)
+    fig = plt.figure()
+    ax = fig.add_subplot(111, projection = '3d')
+    ax.set_xlabel('Red')
+    ax.set_ylabel('Green')
+    ax.set_zlabel('Blue')
+    Red_mean = np.mean(Red)
+    Green_mean = np.mean(Green)
+    Blue_mean = np.mean(Blue)
+    ax.scatter(Red_mean,Green_mean,Blue_mean, c='g', s=100)
+    ax.scatter(Red,Green,Blue, c='r')
+    ax.set_xlim(0,255)
+    ax.set_ylim(0,255)
+    ax.set_zlim(0,255)
+    plt.show()
+
+
 #Get reference pumpkins
 height= 12
 Pumpkin = picture[2193:2193+height, 2395:2395+height] # Reference image
@@ -77,15 +96,15 @@ pumpkins = Pumpkin
 Pumpkin = picture[1406:1406+height, 2598:2598+height] # Reference image
 pumpkins = np.hstack((Pumpkin,pumpkins))
 Pumpkin = picture[1125:1125+height, 2715:2715+height] # Reference image
-pumpkins = np.hstack((Pumpkin,pumpkins))
+Ref_pumpkins = np.hstack((Pumpkin,pumpkins))
 savePicture("Pumpkins", pumpkins)
 
 # exercise 1: find mean and standard deviations of the pumpkins.
 print "Find statistics of the RGB image; e.g mean and standard deviation"
-find_info(pumpkins, True)
+find_info(Ref_pumpkins, True)
 
 # segment the image from CieLab values.
-cieLab_ref = cv2.cvtColor(pumpkins, cv2.COLOR_BGR2LAB)
+cieLab_ref = cv2.cvtColor(Ref_pumpkins, cv2.COLOR_BGR2LAB)
 print "\nFinding CieLAB image statistics"
 find_info(cieLab_ref, True)
 
@@ -99,14 +118,14 @@ savePicture("RGB_Threshold", mask1)
 #Do a CieLAB color thresholding.
 cieLab_image = cv2.cvtColor(picture, cv2.COLOR_BGR2LAB)
 std_dev = 7
-binaryimg = cv2.inRange(cieLab_image, (122-(20*std_dev),154-(4*std_dev),175-(4*std_dev)),(122+(20*std_dev),154+(4*std_dev),175+(4*std_dev)))
+cielab_segmented = cv2.inRange(cieLab_image, (122-(20*std_dev),154-(4*std_dev),175-(4*std_dev)),(122+(20*std_dev),154+(4*std_dev),175+(4*std_dev)))
 kernel = np.ones((9,9),np.uint8)
-binaryimg = cv2.morphologyEx(binaryimg, cv2.MORPH_OPEN, kernel)
-MarkPumpkins(picture, binaryimg)
-countPumpkins(binaryimg)
+cielab_segmented = cv2.morphologyEx(cielab_segmented, cv2.MORPH_OPEN, kernel)
+MarkPumpkins(picture, cielab_segmented)
+countPumpkins(cielab_segmented)
 
 #Stack images up uppon, so we can compare
-ret, bp_threshold = cv2.threshold(src=binaryimg,thresh=50,maxval=255,type=cv2.THRESH_BINARY)
+ret, bp_threshold = cv2.threshold(src=cielab_segmented,thresh=50,maxval=255,type=cv2.THRESH_BINARY)
 bp_threshold = cv2.merge((bp_threshold,bp_threshold,bp_threshold))
 res = cv2.bitwise_and(picture, bp_threshold)
 stack = np.vstack((picture, bp_threshold, res))
@@ -116,27 +135,14 @@ savePicture("cieLab_8", stack)
 
 # exercise 2: Segment the image from different methods
 # use backprojection segmentation to find pumpkins.
-pumpkinsimage = backProj(pumpkins, picture)
+pumpkinsimage = backProj(Ref_pumpkins, picture)
 #showimg("Backprojected image", pumpkinsimage)
 savePicture("Backprojected_image", pumpkinsimage)
 
-height, width, channels = pumpkins.shape
-Blue,Green,Red= cv2.split(pumpkins)
-
-fig = plt.figure()
-ax = fig.add_subplot(111, projection = '3d')
-ax.set_xlabel('Red')
-ax.set_ylabel('Green')
-ax.set_zlabel('Blue')
-Red_mean = np.mean(Red)
-Green_mean = np.mean(Green)
+Blue, Green, Red = cv2.split(Ref_pumpkins)
 Blue_mean = np.mean(Blue)
-ax.scatter(Red_mean,Green_mean,Blue_mean, c='g', s=100)
-ax.scatter(Red,Green,Blue, c='r')
-ax.set_xlim(0,255)
-ax.set_ylim(0,255)
-ax.set_zlim(0,255)
-plt.show()
+Green_mean = np.mean(Green)
+Red_mean = np.mean(Red)
 
 bgr = [Blue_mean,Green_mean,Red_mean]
 threshold = 50
@@ -149,4 +155,6 @@ result = cv2.bitwise_and(binaryimg_RGB_distance, picture)
 
 print math.sqrt(54**2+30**2)
 
+
+print np.shape(picture)
 #showimg("bgr distance", result)
