@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c1f1db6-2f31-4b28-8f23-ef076664edfe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/images/DJI_0238.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/images/DJI_0239.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Input/images/DJI_0240.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Output/images/Pumpkin.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/venv/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,15 +21,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+            <state relative-caret-position="122">
+              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
-                <element signature="e#330#529#0" />
-                <element signature="e#657#1962#0" />
-                <element signature="e#2481#2794#0" />
-                <element signature="e#2838#3161#0" />
-                <element signature="e#3065#3101#0" />
+                <element signature="e#328#527#0" />
+                <element signature="e#655#1960#0" />
+                <element signature="e#2067#2441#0" />
+                <element signature="e#2494#2809#0" />
+                <element signature="e#2684#2856#0" />
+                <element signature="e#3062#3105#0" />
+                <element signature="e#3135#3633#0" />
               </folding>
             </state>
           </provider>
@@ -35,6 +42,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>picture</find>
+      <find>med</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -59,7 +67,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Course" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,11 +78,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -124,11 +132,11 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19200628" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.22966507" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2068404" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33713356" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -150,15 +158,17 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="52" column="64" lean-forward="true" selection-start-line="52" selection-start-column="64" selection-end-line="52" selection-end-column="64" />
+        <state relative-caret-position="122">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
-            <element signature="e#330#529#0" />
-            <element signature="e#657#1962#0" />
-            <element signature="e#2481#2794#0" />
-            <element signature="e#2838#3161#0" />
-            <element signature="e#3065#3101#0" />
+            <element signature="e#328#527#0" />
+            <element signature="e#655#1960#0" />
+            <element signature="e#2067#2441#0" />
+            <element signature="e#2494#2809#0" />
+            <element signature="e#2684#2856#0" />
+            <element signature="e#3062#3105#0" />
+            <element signature="e#3135#3633#0" />
           </folding>
         </state>
       </provider>
