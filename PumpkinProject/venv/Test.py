@@ -49,8 +49,8 @@ def find_info(image, Colorimage):
             print "Mean: " + str(np.mean(image[:,:,i]))
             print "Standard deviation: " + str(np.std(image[:,:,i])) + "\n"
     else:
-        print "Mean: " + std(np.mean(image))
-        print "Standard deviation: " + std(np.std(image)) + "\n"
+        print "Mean: " + str(np.mean(image))
+        print "Standard deviation: " + str(np.std(image)) + "\n"
 
 def countPumpkins(binaryimage):
     contours, hierarchy = cv2.findContours(binaryimage, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
@@ -123,13 +123,25 @@ showimg("Backprojected image", pumpkinsimage)
 savePicture("Backprojected_image", pumpkinsimage)
 
 #RGB Space distance thresholding.
-
 RGB_space3D(pumpkins)
+RGB_Space = cv2.cvtColor(picture, cv2.COLOR_BGR2GRAY)
 
 
+#Does not work to make the RGB distance calculation :(
+A = np.arange(3078*5472).reshape(3078,5472)
+A[:,:] = np.sqrt(((30-picture[:,:,0])**2)+((94-picture[:,:,1])**2)+((170-picture[:,:,2])**2))
 
-
-
+'''
+Uncomment this part for a seriously slow "Distance in RGB space" function
+for i in range (0, 3078):
+    for j in range (0, 5472):
+        if (np.sqrt(((30-picture[i,j,0])**2)+((94-picture[i,j,1])**2)+((170-picture[i,j,2])**2)) > 255, ):
+            RGB_Space = 255
+        else:
+            RGB_Space[i,j] = np.sqrt(((30-picture[i,j,0])**2)+((94-picture[i,j,1])**2)+((170-picture[i,j,2])**2))
+showimg("A", RGB_Space)
+savePicture("RGB_Distance", RGB_Space)
+'''
 
 # Exercise 3
 
