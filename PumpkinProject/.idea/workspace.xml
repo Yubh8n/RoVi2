@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9c1f1db6-2f31-4b28-8f23-ef076664edfe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/images/DJI_0238.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/images/DJI_0239.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Input/images/DJI_0240.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Output/images/Pumpkin.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/venv/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/venv/Test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,17 +15,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/venv/Test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+            <state relative-caret-position="240">
+              <caret line="143" column="3" lean-forward="true" selection-start-line="143" selection-start-column="3" selection-end-line="143" selection-end-column="3" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
                 <element signature="e#328#527#0" />
                 <element signature="e#655#1960#0" />
-                <element signature="e#2067#2441#0" />
-                <element signature="e#2494#2809#0" />
-                <element signature="e#2684#2856#0" />
-                <element signature="e#3062#3105#0" />
-                <element signature="e#3135#3633#0" />
               </folding>
             </state>
           </provider>
@@ -43,6 +32,7 @@
     <findStrings>
       <find>picture</find>
       <find>med</find>
+      <find>split</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,11 +122,11 @@
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.22966507" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22962382" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33713356" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.59771985" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -153,22 +143,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Did some filtering, works like a charm!" />
     <MESSAGE value="Changes, partly done, needs a cleanup, and we need RGB distance stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes, partly done, needs a cleanup, and we need RGB distance stuff." />
+    <MESSAGE value="We need RGB space!" />
+    <MESSAGE value="Last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+        <state relative-caret-position="240">
+          <caret line="143" column="3" lean-forward="true" selection-start-line="143" selection-start-column="3" selection-end-line="143" selection-end-column="3" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
             <element signature="e#328#527#0" />
             <element signature="e#655#1960#0" />
-            <element signature="e#2067#2441#0" />
-            <element signature="e#2494#2809#0" />
-            <element signature="e#2684#2856#0" />
-            <element signature="e#3062#3105#0" />
-            <element signature="e#3135#3633#0" />
           </folding>
         </state>
       </provider>
