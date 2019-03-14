@@ -1,3 +1,9 @@
 import numpy as np
 
-np.linalg.solve
+#Exercise 1
+a = np.array([[3,7],[-5,2]])
+b = np.array([3,2])
+x = np.linalg.solve(a,b)
+print x
+
+#Exercise 2
